@@ -31,6 +31,6 @@ images.forEach((element) => {
             <h3 class="card-title">${element.title}</h3>
             <p class="card-text">${element.text}</p>
         </div>
-    </div>
+    </div> 
     `
 });
