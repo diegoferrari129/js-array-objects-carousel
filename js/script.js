@@ -22,10 +22,9 @@ const images = [
     }
 ];
 
-
 images.forEach((element) => {
     document.getElementById('card_section').innerHTML += `
-    <div class="card text-center bg-dark text-white mt-4">
+    <div class="card text-center bg-dark text-white mt-4 d-none">
         <img src="${element.image}" class="card-img py-3" alt="games">
         <div class="card-body">
             <h3 class="card-title">${element.title}</h3>
@@ -33,4 +32,12 @@ images.forEach((element) => {
         </div>
     </div> 
     `
+});
+
+let activeElement = 0;
+
+let mainImg = document.querySelectorAll('.card');
+mainImg[activeElement].classList.remove('d-none');
+
+document.getElementById('buttons').addEventListener('click', function() {
 });
