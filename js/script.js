@@ -39,5 +39,30 @@ let activeElement = 0;
 let mainImg = document.querySelectorAll('.card');
 mainImg[activeElement].classList.remove('d-none');
 
-document.getElementById('buttons').addEventListener('click', function() {
+document.getElementById('next').addEventListener('click', function() {
+    mainImg[activeElement].classList.add('d-none');
+
+    if (activeElement == mainImg.length -1) {
+        activeElement = 0
+    }
+
+    else {
+        activeElement++; 
+    }
+
+    mainImg[activeElement].classList.remove('d-none');
+});
+
+document.getElementById('back').addEventListener('click', function() {
+    mainImg[activeElement].classList.add('d-none');
+
+    if (activeElement == 0) {
+        activeElement = mainImg.length -1;
+    }
+
+    else {
+        activeElement--; 
+    }
+
+    mainImg[activeElement].classList.remove('d-none');
 });
