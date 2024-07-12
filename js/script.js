@@ -25,10 +25,14 @@ const images = [
 images.forEach((element) => {
     document.getElementById('card_section').innerHTML += `
     <div class="card text-center bg-dark text-white mt-4 d-none">
-        <img src="${element.image}" class="card-img py-3" alt="games">
-        <div class="card-body">
-            <h3 class="card-title">${element.title}</h3>
-            <p class="card-text">${element.text}</p>
+        <div class="img-s">
+            <img src="${element.image}" class="card-img py-3" alt="games">
+        </div>
+        <div class="">
+            <div class="card-body">
+                <h3 class="card-title">${element.title}</h3>
+                <p class="card-text">${element.text}</p>
+            </div>
         </div>
     </div> 
     `
